@@ -1,20 +1,20 @@
 #include "std_lib_facilities.h"
 
-const vector<string> units {"m", "cm", "in", "ft"};
+const vector<string> units {"m", "cm", "in", "ft"}; //avaliable units
 
-const double cm_to_m = 0.01;
-const double in_to_m = 2.54 * cm_to_m;
-const double ft_to_m = 12.0 * in_to_m;
+const double cm_to_m = 0.01; //convert cm to m
+const double in_to_m = 2.54 * cm_to_m; //convert in to m
+const double ft_to_m = 12.0 * in_to_m; //convert ft to m
 
 
-void write()
+void write() //instructions
 {
     cout << "Type an amount followed by an unit. Valid units: \n";
     cout << "\tm for meters\n" << "\tcm for centimeters\n" << "\tin for inches\n" << "\tft for feet\n";
 }
 
 
-bool legitimacy_check(string unit)
+bool legitimacy_check(string unit) //checks if the unit input is an element of the units "vector"
 {
     bool legal = false;
     for(string valid_unit: units)
@@ -26,7 +26,7 @@ bool legitimacy_check(string unit)
 }
 
 
-double conversion(double amount, string un)
+double conversion(double amount, string un) //converts the given unit to m based on the conversion values above
 {
     double m = 0.0;
     if(un == "ft")
@@ -45,11 +45,11 @@ double conversion(double amount, string un)
 int main()
 {
     write();
-    double a, m = 0.0;
+    double a, m = 0.0; //a --> value, m --> converted value
     double smallest, largest, summary = 0.0;
-    int i;
-    vector<double> values;
-    string unit = "";
+    int i; //counter
+    vector<double> values; //a vector for the converted values
+    string unit = ""; //unit
     while(cin >> a >> unit)
     {
         if(legitimacy_check(unit))
