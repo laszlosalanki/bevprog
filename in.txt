@@ -1,0 +1,2 @@
+>gi|89161198|ref|AC_000045.1| Homo sapiens chromosome 2, alternate assembly Hs_Celera chromosome, whole genome shotgun sequence
+TCAGAATAAACAGACAACCCACAGAATGTGAGAAAATATTTGCAAATTATGCATCTGACAAAGGTCTAAT
